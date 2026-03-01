@@ -1,3 +1,70 @@
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+@media (max-width: 900px) {
+    .nav-section-link {
+        display: none !important;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .nav-links {
+        flex-wrap: nowrap;
+    }
+}
+@media (max-width: 768px) {
+    .location-card-flex {
+        flex-direction: column !important;
+        gap: 1.2rem;
+    }
+    .map-embed {
+        flex-basis: auto !important;
+        width: 100% !important;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .map-embed iframe {
+        width: 100% !important;
+        height: 220px !important;
+        min-width: 0 !important;
+    }
+}
+/* Location card flex for map and text side-by-side */
+.location-card-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+}
+.location-details {
+    flex: 1 1 0;
+}
+.map-embed {
+    flex: 0 0 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 * {
     margin: 0;
     padding: 0;
@@ -5,10 +72,11 @@
 }
 
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
+    --primary-color: #364a29;
+    --secondary-color: #4c6880;
+    --highlight-color: #855e23;
     --text-color: #333;
-    --bg-color: #f8f9fa;
+    --bg-color: #bfc0c1;
     --white: #ffffff;
 }
 
@@ -38,6 +106,20 @@ body {
     z-index: 100;
 }
 
+/* Enquire section flex layout */
+ .enquire-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.enquire-inline-btn {
+    margin-left: 1rem;
+    white-space: nowrap;
+}
+
+
 .navbar .container {
     display: flex;
     justify-content: space-between;
@@ -45,10 +127,190 @@ body {
     padding: 1rem 20px;
 }
 
-.logo {
-    font-size: 1.5rem;
+.logo-block {
+    font-size: 1.7rem;
     font-weight: bold;
+    color: var(--white);
+    background: var(--primary-color);
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    letter-spacing: 2px;
+    box-shadow: var(--shadow-medium);
+}
+/* Block colour placeholders */
+.photo-placeholder {
+    width: 120px;
+    height: 120px;
+    background: var(--secondary-color);
     color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-medium);
+}
+.logo-placeholder {
+    width: 60px;
+    height: 60px;
+    background: var(--grey);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--primary-color);
+}
+.space-placeholder {
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+    background: var(--blue-light);
+    color: var(--text-color);
+    text-align: center;
+    line-height: 40px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+/* About section flex */
+.about-flex {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.about-photo-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 140px;
+}
+.about-content {
+    max-width: 500px;
+}
+.cred-list {
+    margin: 1rem 0 1.5rem 1.2rem;
+    padding-left: 1.2rem;
+}
+.cred-list li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+blockquote {
+    font-style: italic;
+    color: var(--grey-dark);
+    background: var(--green-light);
+    border-left: 4px solid var(--primary-color);
+    padding: 0.7rem 1.2rem;
+    border-radius: 6px;
+}
+/* Outcomes and mediums */
+.outcomes-list {
+    list-style: disc inside;
+    margin: 1.2rem auto 1.2rem auto;
+    max-width: 400px;
+    text-align: left;
+    color: var(--white);
+    font-size: 1.1rem;
+}
+.note {
+    margin: 1rem 0 0.5rem 0;
+    font-weight: bold;
+    color: var(--highlight-color);
+}
+.mediums-block {
+    background: var(--secondary-color);
+    color: var(--white);
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    margin-top: 0.7rem;
+    font-size: 1rem;
+}
+/* Location section */
+.location-flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.location-block {
+    background: var(--white);
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    border: 2px solid #000;
+    min-width: 260px;
+    margin: 1.5rem auto;
+}
+.location-block a {
+    color: #007bff;
+    text-decoration: underline;
+}
+/* Pricing link block */
+.pricing-link-block {
+    background: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+}
+/* FAQs */
+.faqs {
+    background: var(--secondary-color);
+    padding: 3rem 0;
+}
+.faq-item {
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow-medium);
+    margin: 1.2rem auto;
+    max-width: 600px;
+    padding: 1.2rem 1.5rem;
+}
+.faq-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+/* Enquire section */
+.enquire {
+    background: var(--blue-light);
+    padding: 3rem 0;
+}
+/* Pricing page */
+.pricing-main {
+    background: var(--white);
+    min-height: 60vh;
+    padding: 3rem 0 4rem 0;
+}
+.pricing-main h1 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+.pricing-list, .aid-list {
+    margin: 1.2rem 0 2rem 1.5rem;
+    padding-left: 1.2rem;
+}
+.pricing-list li, .aid-list li {
+    margin-bottom: 0.7rem;
+    font-size: 1.1rem;
+}
+/* CTA link in nav */
+.cta-link {
+    background: var(--highlight-color);
+    color: var(--white) !important;
+    padding: 0.4rem 1.1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-left: 0.7rem;
+    transition: background 0.2s;
+}
+.cta-link:hover {
+    background: var(--highlight-color);
 }
 
 .nav-links {
@@ -69,7 +331,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), #0056b3);
+    background: var(--secondary-color);
     color: var(--white);
     padding: 6rem 20px;
     text-align: center;
@@ -136,7 +398,7 @@ form {
 form input,
 form textarea {
     padding: 0.75rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--grey);
     border-radius: 4px;
     font-size: 1rem;
     font-family: inherit;
@@ -146,12 +408,12 @@ form input:focus,
 form textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    box-shadow: var(--shadow-blue);
 }
 
 /* CTA Button */
 .cta-button {
-    background-color: var(--primary-color);
+    background-color: var(--highlight-color);
     color: var(--white);
     padding: 0.75rem 2rem;
     border: none;
@@ -162,7 +424,7 @@ form textarea:focus {
 }
 
 .cta-button:hover {
-    background-color: #0056b3;
+    background-color: var(--highlight-color);
     transform: translateY(-2px);
 }
 
@@ -172,7 +434,7 @@ form textarea:focus {
 
 /* Footer */
 footer {
-    background-color: #2c3e50;
+    background-color: var(--navy);
     color: var(--white);
     text-align: center;
     padding: 2rem 20px;
@@ -211,4 +473,12 @@ footer p {
     .hero {
         padding: 3rem 20px;
     }
+}
+
+/* Limit HCPC logo size */
+.logo-hcpc {
+  max-width: 120px;
+  height: auto;
+  display: block;
+  margin: 12px 0;
 }

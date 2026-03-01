@@ -3,55 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Website</title>
+    <title>Raphie Art Therapy</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
-            <div class="logo">My Site</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <div class="logo-block">Raphie Art Therapy</div>
+            <ul class="nav-links" id="navLinks">
+                <li class="nav-section-link"><a href="#top">Home</a></li>
+                <li class="nav-section-link"><a href="#about">About</a></li>
+                <li class="nav-section-link"><a href="#location">Location</a></li>
+                <li class="nav-section-link"><a href="#faqs">FAQs</a></li>
+                <li class="nav-section-link"><a href="pricing.html">Pricing</a></li>
+                <li><a href="#enquire" class="cta-link">Enquire</a></li>
             </ul>
         </div>
     </nav>
 
-    <header class="hero">
+    <header class="hero" id="top">
         <div class="hero-content">
-            <h1>Welcome to My Website</h1>
-            <p>This is a GitHub Pages test website</p>
-            <button class="cta-button">Get Started</button>
+            <h1>Art helps to access parts of the brain that words cannot</h1>
+            <p>Art therapy is focused on the journey, and helps with one or many of these outcomes:</p>
+            <ul class="outcomes-list">
+                <li>Build resilience</li>
+                <li>Learn techniques for emotional regulation</li>
+                <li>Learn who you are</li>
+                <li>Process past trauma</li>
+            </ul>
+            <p class="note">No need for fine art talent</p>
+            <div class="mediums-block">
+                <strong>Mediums used:</strong> Paint, collage, clay, drawing, digital, and more
+            </div>
         </div>
     </header>
 
     <section id="about" class="about">
-        <div class="container">
-            <h2>About</h2>
-            <p>This is a basic GitHub Pages test website created with HTML, CSS, and JavaScript.</p>
-            <p>It serves as a starting point for your web projects and can be customized to fit your needs.</p>
+        <div class="container about-flex">
+            <div class="about-photo-block">
+                <div class="photo-placeholder">Photo</div>
+                    <img src="img/HCPC-registered-logo.jpg" alt="HCPC Registered Logo" class="logo-hcpc" />
+            </div>
+            <div class="about-content">
+                <h2>About Raphie</h2>
+                <ul class="cred-list">
+                    <li>Accredited by the <a href="https://www.baat.org/" target="_blank">British Association of Art Therapists</a></li>    
+                    <li>Experienced with teens and young people</li>
+                </ul>
+                <blockquote>“I believe in doing therapy this way. I am friendly and we'll get on well.”</blockquote>
+            </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="location" class="location">
+        <div class="container location-flex">
+            <div class="location-block location-card-flex">
+                <div class="location-details">
+                    <h2>Location</h2>
+                    <p>Part of <a href="https://cats.org.uk" target="_blank">CATS</a></p>
+                    <p>Easter Road, bus routes (1, 7, 35)</p>
+                    <p>Comfortable space <span class="space-placeholder">[Picture]</span></p>
+                    <p>Discreet entrance</p>
+                    <p>Online sessions available</p>
+                </div>
+                <div class="map-embed">
+                    <iframe src="https://www.google.com/maps?q=Creative+Arts+Therapies+Space+CIC,+Easter+Road,+Edinburgh&output=embed" width="220" height="220" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-link-block">
         <div class="container">
-            <h2>Contact</h2>
-            <p>Feel free to reach out through your preferred communication channel.</p>
-            <form>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" class="cta-button">Send Message</button>
-            </form>
+            <a href="pricing.html" class="cta-button">See Pricing</a>
+        </div>
+    </section>
+
+    <section id="faqs" class="faqs">
+        <div class="container">
+            <h2>FAQs</h2>
+            <div class="faq-item">
+                <h3>Privacy & Confidentiality</h3>
+                <p>Nothing shared with parents unless risk of harm. Showing of artwork is always your choice.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do I need to talk?</h3>
+                <p>No, you can express yourself through art as much or as little as you wish.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is this going to be awkward?</h3>
+                <p>Most people feel nervous at first, but sessions are relaxed and at your pace.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="enquire" class="enquire">
+        <div class="container">
+            <h2>Enquire</h2>
+            <div class="enquire-flex">
+                <span>
+                    To enquire or book, please send an email to <strong>raphie.artpsychotherapy@proton.me</strong>.
+                </span>
+                <a href="mailto:raphie.artpsychotherapy@proton.me?subject=Art%20Therapy%20Enquiry" class="cta-button enquire-inline-btn">Send Email</a>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 My Website. All rights reserved.</p>
+            <p>&copy; 2026 Raphie Art Therapy. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
