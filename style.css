@@ -105,6 +105,11 @@ body {
     top: 0;
     z-index: 100;
 }
+/* Enquire section */
+.enquire {
+    background: var(--white);
+    padding: 3rem 0;
+}
 
 /* Enquire section flex layout */
  .enquire-flex {
@@ -276,11 +281,7 @@ blockquote {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
-/* Enquire section */
-.enquire {
-    background: var(--blue-light);
-    padding: 3rem 0;
-}
+
 /* Pricing page */
 .pricing-main {
     background: var(--white);
@@ -435,7 +436,7 @@ form textarea:focus {
 /* Footer */
 footer {
     background-color: var(--navy);
-    color: var(--white);
+    color: var(--black);
     text-align: center;
     padding: 2rem 20px;
 }
