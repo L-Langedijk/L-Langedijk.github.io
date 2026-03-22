@@ -27,12 +27,14 @@
 
 
 :root {
-    --primary-color: #364a29;
-    --secondary-color: #4c6880;
-    --highlight-color: #855e23;
+    --primary-color: var(--orange-crayola);
+    --secondary-color: var(--sage-green);
+    --highlight-color: var(--orange-crayola);
     --text-color: #333;
-    --bg-color: #bfc0c1;
+    --bg-color: #4c6880;
     --white: #ffffff;
+    --sage-green: #87ae73;
+    --orange-crayola:#FF7538;
     --location-block-height: 440px;
 }
 
@@ -61,6 +63,7 @@ body {
     top: 0;
     z-index: 100;
 }
+
 /* Enquire section */
 .enquire {
     background: var(--white);
@@ -98,6 +101,40 @@ body {
     letter-spacing: 2px;
     box-shadow: var(--shadow-medium);
 }
+
+/* Organisation Announcement Banner */
+.org-banner {
+    background-color: #f4f7f6; /* A soft, professional neutral */
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.org-banner p {
+    margin: 0;
+    color: #333;
+}
+
+.org-banner a {
+    color: #2c3e50; /* Matches your professional headings */
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 5px;
+    transition: color 0.3s ease;
+}
+
+.org-banner a:hover {
+    color: #000; /* Subtle hover effect */
+}
+
+/* Ensure it looks good on mobile */
+@media (max-width: 600px) {
+    .org-banner {
+        font-size: 0.85rem;
+        padding: 12px 15px;
+    }
+}
 /* Block colour placeholders */
 .photo-placeholder {
     width: 120px;
@@ -112,31 +149,7 @@ body {
     margin-bottom: 1rem;
     box-shadow: var(--shadow-medium);
 }
-.logo-placeholder {
-    width: 60px;
-    height: 60px;
-    background: var(--grey);
-    color: var(--text-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-    border: 2px solid var(--primary-color);
-}
-.space-placeholder {
-    display: inline-block;
-    width: 60px;
-    height: 40px;
-    background: var(--blue-light);
-    color: var(--text-color);
-    text-align: center;
-    line-height: 40px;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    margin-left: 0.5rem;
-}
+
 /* About section flex */
 .about-flex {
     display: flex;
@@ -182,7 +195,7 @@ blockquote {
 .note {
     margin: 1rem 0 0.5rem 0;
     font-weight: bold;
-    color: var(--highlight-color);
+    color: white;
 }
 .mediums-block {
     background: var(--secondary-color);
@@ -251,24 +264,81 @@ blockquote {
     padding: 2rem 0;
     text-align: center;
 }
-/* FAQs */
+/* FAQ Accordion Styling */
 .faqs {
     background: var(--secondary-color);
     color: var(--white);
     padding: 3rem 0;
 }
-.faq-item {
+
+.faq-category h3 {
+    margin-bottom: 20px;
     color: var(--text-color);
-    background: var(--white);
-    border-radius: 8px;
-    box-shadow: var(--shadow-medium);
-    margin: 1.2rem auto;
-    max-width: 600px;
-    padding: 1.2rem 1.5rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
 }
-.faq-item h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
+
+.faq-item {
+    background: var(--white);
+    color: var(--text-color);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item summary {
+    padding: 15px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none; /* Removes default arrow in some browsers */
+    position: relative;
+    outline: none;
+}
+
+/* FAQ Grid for Desktop */
+@media (min-width: 768px) {
+    .faq-grid-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 40px; /* Space between the two columns */
+        align-items: start; /* Prevents one column from stretching to match the height of the other */
+    }
+
+    .faq-category {
+        margin-top: 0 !important; /* Removes the margin-top you added for mobile stacking */
+    }
+}
+
+/* Ensure the title stays full width above the columns */
+.faqs h2 {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+/* Adds a custom plus/minus sign */
+.faq-item summary::after {
+    content: '+';
+    float: right;
+    transition: transform 0.3s;
+}
+
+.faq-item[open] summary::after {
+    content: '-';
+    transform: rotate(180deg);
+}
+
+.faq-content {
+    padding: 0 20px 15px 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.faq-item[open] {
+    border-color: #2c3e50; /* Highlights the active question */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 /* Pricing page */
@@ -289,6 +359,57 @@ blockquote {
     margin-bottom: 0.7rem;
     font-size: 1.1rem;
 }
+
+/* Organisations page */
+.organisations-main {
+    background: var(--white);
+    padding: 3rem;
+}
+
+.org-services {
+    padding: 60px 0;
+    background-color: var(--secondary-color);
+}
+
+.org-services h2 {
+    color: var(--white);
+    margin-bottom: 40px;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 12px; /* Matches your map and card style */
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Subtle depth */
+    border: 1px solid #eee;
+}
+
+.service-card h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.outcome {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.service-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.service-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+
+
 /* CTA link in nav */
 .cta-link {
     background: var(--highlight-color);
@@ -472,4 +593,16 @@ footer p {
   display: block;
   margin: 12px 0;
 }
-
+/* Limit BAAT logo size */  
+.logo-baat {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 12px 0;
+}
+/* Limit Raphie photo size */
+.about-photo {  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: var(--shadow-medium);
+}
