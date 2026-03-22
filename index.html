@@ -3,55 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Website</title>
+    <title>Raphie Art Therapy</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
-            <div class="logo">My Site</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <div class="logo-block">Raphie Art Therapy</div>
+            <ul class="nav-links" id="navLinks">
+                <li class="nav-section-link"><a href="#top">Home</a></li>
+                <li class="nav-section-link"><a href="#about">About</a></li>
+                <li class="nav-section-link"><a href="#location">Location</a></li>
+                <li class="nav-section-link"><a href="#faqs">FAQs</a></li>
+                <li class="nav-section-link"><a href="pricing.html">Pricing</a></li>
+                <li><a href="#enquire" class="cta-link">Enquire</a></li>
             </ul>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Welcome to My Website</h1>
-            <p>This is a GitHub Pages test website</p>
-            <button class="cta-button">Get Started</button>
+    <div class="org-banner">
+        <div class="container">
+            <p>Working on behalf of an organisation? <a href="organisations.html">View our institutional services</a></p>
+        </div>
+    </div>
+
+    <header class="hero" id="top">
+        <div class="container hero-flex">
+            
+            <div class="hero-content">
+                <h1>Art helps to express parts of the brain that words cannot</h1>
+                <p>Art therapy is focused on the journey, not the destination. This process may help with:</p>
+                <ul class="outcomes-list">
+                    <li>Building resilience</li>
+                    <li>Emotional regulation</li>
+                    <li>Self Esteem</li>
+                    <li>Self Discovery</li>
+                    <li>Processing past trauma</li>
+                    <li>Reducing symptoms of anxiety and depression</li>
+                    <li>Finding healthy coping mechanisms</li>
+                </ul>
+
+                <p>This safe space allows you to relax and explore with a guiding and supporting set of hands.</p>
+                <p class="note">No art experience necessary</p>
+
+                <div class="mediums-block">
+                    <strong>Materials to explore with:</strong> Watercolour/Acryllic paints, collage, clay, pencil, soft and oil pastels, digital, fabrics and more
+                </div>
+            </div>
+
+            <div class="hero-image-block">
+                <img src="img/ready-art-table.jpg" alt="Photo of art materials" class="hero-image" />
+            </div>
+
         </div>
     </header>
 
     <section id="about" class="about">
-        <div class="container">
-            <h2>About</h2>
-            <p>This is a basic GitHub Pages test website created with HTML, CSS, and JavaScript.</p>
-            <p>It serves as a starting point for your web projects and can be customized to fit your needs.</p>
+        <div class="container about-flex">
+            <div class="about-photo-block">
+                <img src="img/raphie.jpg" alt="Photo of Raphie" class="about-photo" />
+            </div>
+            <div class="about-content">
+                <h2>About Raphie</h2>
+                <ul class="cred-list">
+                    <li>Accredited by the <a href="https://www.baat.org/" target="_blank">British Association of Art Therapists</a></li>    
+                    <li>Experienced working with teens and young people</li>
+                </ul>
+                <blockquote>“I focus on holistic techniques, which means you are the expert of your own lived experience, and you set the pace of your sessions.”</blockquote>
+            </div>
+            <div class="accreditation-logo-block">
+                <img src="img/baat_full_member_logo_rgb.jpg" alt="BAAT Logo" class="logo-baat" />
+                <img src="img/HCPC-registered-logo.jpg" alt="HCPC Registered Logo" class="logo-hcpc" />
+            </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="location" class="location">
+        <div class="container location-flex">
+            <div class="location-block location-card-flex">
+                <div class="location-details">
+                    <h2>Location</h2>
+                    <br>
+                    <p><a href="https://www.creativeartstherapiesspace.org/" target="_blank">Creative Art Therapy Space</a></p>
+                    <br>
+                    <b>Easter Road</b>
+                    <p>(Bus routes 1, 7, 35)</p>
+                    <br>
+                    <b>Comfortable space with a garden view</b>
+                    <p> Please note that I don’t work on-site full-time, so all visits are by appointment only.</p>
+                    <br>
+                    <b>Coming soon: Online sessions</b>
+                </div>
+                <div class="location-photo-block">
+                    <img src="img/therapy-room.jpg" alt="Photo of therapy space" class="location-photo" />
+                </div>
+                <div class="map-embed">
+                    <iframe src="https://www.google.com/maps?q=Creative+Arts+Therapies+Space+CIC,+Easter+Road,+Edinburgh&output=embed" width="440" height="440" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-link-block">
         <div class="container">
-            <h2>Contact</h2>
-            <p>Feel free to reach out through your preferred communication channel.</p>
-            <form>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" class="cta-button">Send Message</button>
-            </form>
+            <a href="pricing.html" class="cta-button">See Pricing</a>
+        </div>
+    </section>
+
+    <section id="faqs" class="faqs">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-grid-wrapper">
+                <div class="faq-category">
+                    <h3>For Participants</h3>
+                    
+                    <details class="faq-item">
+                        <summary>What is art therapy?</summary>
+                        <div class="faq-content">
+                            <p>It is a form of psychotherapy that uses art-making as its primary mode of communication. It allows you to express thoughts and feelings that might be difficult to put into words, guided by a trained therapist.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Do I need experience in art making?</summary>
+                        <div class="faq-content">
+                            <p>Absolutely not. The focus is on the process and expression, not the final product. You don't need to be "good at art" to benefit from the sessions.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Do I need to talk?</summary>
+                        <div class="faq-content">
+                            <p>No, you can express yourself through art as much or as little as you wish.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What does a session look like?</summary>
+                        <div class="faq-content">
+                            <p>A typical 50-minute session involves a check-in, a period of art-making (at your own pace), and a time to reflect together on the images or the process if you feel comfortable doing so.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Is this going to be awkward?</summary>
+                        <div class="faq-content">
+                            <p>Most people feel nervous at first, but sessions are relaxed and at your pace.</p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="faq-category" style="margin-top: 40px;">
+                    <h3>For Friends & Family</h3>
+
+                    <details class="faq-item">
+                        <summary>Privacy & Confidentiality</summary>
+                        <div class="faq-content">
+                            <p>Nothing is shared outside of sessions unless there is a risk of harm. Showing of artwork is always the participant's choice. This is important for maintaining a trusting environment.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Who can benefit from art therapy?</summary>
+                        <div class="faq-content">
+                            <p>Anyone experiencing emotional distress, trauma, or life transitions. It is particularly effective for those who find traditional "talk therapy" intimidating or insufficient.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>How can I encourage someone to try art therapy?</summary>
+                        <div class="faq-content">
+                            <p>Be sure not to force anyone into therapy - it only works when the participant is ready. Instead, share information about its benefits and offer support if they express interest.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Do you provide the materials?</summary>
+                        <div class="faq-content">
+                            <p>Yes, all professional-grade art materials—including paints, clay, collage, and drawing tools—are provided during our in-person sessions.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="enquire" class="enquire">
+        <div class="container">
+            <h2>Enquire</h2>
+            <div class="enquire-flex">
+                <span>
+                    To enquire or book, please send an email to <strong>raphie.art-psychotherapy@proton.me</strong>.
+                </span>
+                <a href="mailto:raphie.art-psychotherapy@proton.me?subject=Art%20Therapy%20Enquiry" class="cta-button enquire-inline-btn">Send Email</a>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 My Website. All rights reserved.</p>
+            <p>&copy; 2026 Raphie Art Therapy. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

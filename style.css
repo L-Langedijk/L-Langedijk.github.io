@@ -1,15 +1,41 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@media (max-width: 900px) {
+    .nav-section-link {
+        display: none !important;
+    }
+    .nav-links {
+        flex-wrap: nowrap;
+    }
+}
+@media (max-width: 768px) {
+    .location-card-flex {
+        flex-direction: column !important;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+    }
+    .map-embed {
+        flex-basis: auto !important;
+        width: 100% !important;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .map-embed iframe {
+        width: 100% !important;
+        height: var(--location-block-height) !important;
+        min-width: 0 !important;
+    }
 }
 
+
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
+    --primary-color: var(--orange-crayola);
+    --secondary-color: var(--sage-green);
+    --highlight-color: var(--orange-crayola);
     --text-color: #333;
-    --bg-color: #f8f9fa;
+    --bg-color: #4c6880;
     --white: #ffffff;
+    --sage-green: #87ae73;
+    --orange-crayola:#FF7538;
+    --location-block-height: 440px;
 }
 
 html {
@@ -38,6 +64,26 @@ body {
     z-index: 100;
 }
 
+/* Enquire section */
+.enquire {
+    background: var(--white);
+    padding: 3rem 0;
+}
+
+/* Enquire section flex layout */
+ .enquire-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.enquire-inline-btn {
+    margin-left: 1rem;
+    white-space: nowrap;
+}
+
+
 .navbar .container {
     display: flex;
     justify-content: space-between;
@@ -45,10 +91,337 @@ body {
     padding: 1rem 20px;
 }
 
-.logo {
-    font-size: 1.5rem;
+.logo-block {
+    font-size: 1.7rem;
     font-weight: bold;
+    color: var(--white);
+    background: var(--primary-color);
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    letter-spacing: 2px;
+    box-shadow: var(--shadow-medium);
+}
+
+/* Organisation Announcement Banner */
+.org-banner {
+    background-color: #f4f7f6; /* A soft, professional neutral */
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.org-banner p {
+    margin: 0;
+    color: #333;
+}
+
+.org-banner a {
+    color: #2c3e50; /* Matches your professional headings */
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 5px;
+    transition: color 0.3s ease;
+}
+
+.org-banner a:hover {
+    color: #000; /* Subtle hover effect */
+}
+
+/* Ensure it looks good on mobile */
+@media (max-width: 600px) {
+    .org-banner {
+        font-size: 0.85rem;
+        padding: 12px 15px;
+    }
+}
+/* Block colour placeholders */
+.photo-placeholder {
+    width: 120px;
+    height: 120px;
+    background: var(--secondary-color);
     color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-medium);
+}
+
+/* About section flex */
+.about-flex {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.about-photo-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 140px;
+}
+.about-content {
+    max-width: 500px;
+}
+.cred-list {
+    margin: 1rem 0 1.5rem 1.2rem;
+    padding-left: 1.2rem;
+}
+.cred-list li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+blockquote {
+    font-style: italic;
+    color: var(--grey-dark);
+    background: var(--green-light);
+    border-left: 4px solid var(--primary-color);
+    padding: 0.7rem 1.2rem;
+    border-radius: 6px;
+}
+/* Outcomes and mediums */
+.outcomes-list {
+    list-style: disc inside;
+    margin: 1.2rem auto 1.2rem auto;
+    max-width: 400px;
+    text-align: left;
+    color: var(--white);
+    font-size: 1.1rem;
+}
+.note {
+    margin: 1rem 0 0.5rem 0;
+    font-weight: bold;
+    color: white;
+}
+.mediums-block {
+    background: var(--secondary-color);
+    color: var(--white);
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    margin-top: 0.7rem;
+    font-size: 1rem;
+}
+/* Location section */
+.location-flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.location-block {
+    background: var(--white);
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    border: 2px solid #000;
+    min-width: 260px;
+    margin: 1.5rem auto;
+}
+.location-block a {
+    color: #007bff;
+    text-decoration: underline;
+}
+/* Location card flex for map and text side-by-side */
+.location-card-flex {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+}
+.location-details {
+    flex: 1 1 0;
+    max-height: var(--location-block-height);
+}
+.map-embed {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Limit location photo height */
+.location-photo {
+    max-height: var(--location-block-height);
+    width: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* Pricing link block */
+.pricing-link-block {
+    background: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+}
+/* FAQ Accordion Styling */
+.faqs {
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 3rem 0;
+}
+
+.faq-category h3 {
+    margin-bottom: 20px;
+    color: var(--text-color);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.faq-item {
+    background: var(--white);
+    color: var(--text-color);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item summary {
+    padding: 15px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none; /* Removes default arrow in some browsers */
+    position: relative;
+    outline: none;
+}
+
+/* FAQ Grid for Desktop */
+@media (min-width: 768px) {
+    .faq-grid-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 40px; /* Space between the two columns */
+        align-items: start; /* Prevents one column from stretching to match the height of the other */
+    }
+
+    .faq-category {
+        margin-top: 0 !important; /* Removes the margin-top you added for mobile stacking */
+    }
+}
+
+/* Ensure the title stays full width above the columns */
+.faqs h2 {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+/* Adds a custom plus/minus sign */
+.faq-item summary::after {
+    content: '+';
+    float: right;
+    transition: transform 0.3s;
+}
+
+.faq-item[open] summary::after {
+    content: '-';
+    transform: rotate(180deg);
+}
+
+.faq-content {
+    padding: 0 20px 15px 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.faq-item[open] {
+    border-color: #2c3e50; /* Highlights the active question */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Pricing page */
+.pricing-main {
+    background: var(--white);
+    min-height: 60vh;
+    padding: 3rem 0 4rem 0;
+}
+.pricing-main h1 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+.pricing-list, .aid-list {
+    margin: 1.2rem 0 2rem 1.5rem;
+    padding-left: 1.2rem;
+}
+.pricing-list li, .aid-list li {
+    margin-bottom: 0.7rem;
+    font-size: 1.1rem;
+}
+
+/* Organisations page */
+.organisations-main {
+    background: var(--white);
+    padding: 3rem;
+}
+
+.org-services {
+    padding: 60px 0;
+    background-color: var(--secondary-color);
+}
+
+.org-services h2 {
+    color: var(--white);
+    margin-bottom: 40px;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 12px; /* Matches your map and card style */
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Subtle depth */
+    border: 1px solid #eee;
+}
+
+.service-card h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.outcome {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.service-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.service-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+
+
+/* CTA link in nav */
+.cta-link {
+    background: var(--highlight-color);
+    color: var(--white) !important;
+    padding: 0.4rem 1.1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-left: 0.7rem;
+    transition: background 0.2s;
+}
+.cta-link:hover {
+    background: var(--highlight-color);
 }
 
 .nav-links {
@@ -68,11 +441,29 @@ body {
 }
 
 /* Hero Section */
+.hero-flex {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+.hero-image-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 140px;
+}
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), #0056b3);
+    background: var(--secondary-color);
     color: var(--white);
     padding: 6rem 20px;
-    text-align: center;
+    text-align: left;
+}
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+    }
 }
 
 .hero-content h1 {
@@ -136,7 +527,7 @@ form {
 form input,
 form textarea {
     padding: 0.75rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--grey);
     border-radius: 4px;
     font-size: 1rem;
     font-family: inherit;
@@ -146,12 +537,12 @@ form input:focus,
 form textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    box-shadow: var(--shadow-blue);
 }
 
 /* CTA Button */
 .cta-button {
-    background-color: var(--primary-color);
+    background-color: var(--highlight-color);
     color: var(--white);
     padding: 0.75rem 2rem;
     border: none;
@@ -162,7 +553,7 @@ form textarea:focus {
 }
 
 .cta-button:hover {
-    background-color: #0056b3;
+    background-color: var(--highlight-color);
     transform: translateY(-2px);
 }
 
@@ -172,8 +563,8 @@ form textarea:focus {
 
 /* Footer */
 footer {
-    background-color: #2c3e50;
-    color: var(--white);
+    background-color: var(--navy);
+    color: var(--black);
     text-align: center;
     padding: 2rem 20px;
 }
@@ -211,4 +602,33 @@ footer p {
     .hero {
         padding: 3rem 20px;
     }
+}
+
+/* Limit HCPC logo size */
+.logo-hcpc {
+  max-width: 120px;
+  height: auto;
+  display: block;
+  margin: 12px 0;
+}
+/* Limit BAAT logo size */  
+.logo-baat {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 12px 0;
+}
+/* Limit Raphie photo size */
+.about-photo {  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: var(--shadow-medium);
+}
+/* Hero image styling */
+.hero-image {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: var(--shadow-medium);
 }

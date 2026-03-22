@@ -1,3 +1,13 @@
+// Hamburger menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelectorAll('.nav-section-link');
+    hamburger.addEventListener('click', function() {
+        navLinks.forEach(link => {
+            link.style.display = (link.style.display === 'block') ? 'none' : 'block';
+        });
+    });
+});
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
